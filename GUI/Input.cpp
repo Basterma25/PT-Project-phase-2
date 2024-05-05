@@ -70,7 +70,8 @@ ActionType Input::GetUserAction() const
 			case COPY: return TO_COPY;
 			case CUT: return TO_CUT;
 			case PASTE: return TO_PASTE;
-			case SEND_BACK_BRING_FRONT: return TO_SEND_BACK_BRING_FRONT;
+			case SEND_BACK: return TO_SEND_BACK;
+			case BRING_FRONT: return TO_BRING_FRONT;
 			case SAVE_GRAPH: return TO_SAVE_GRAPH;
 			case LOAD_GRAPH: return TO_LOAD_GRAPH;
 			case SWITCH_PLAY_MODE: return TO_PLAY;

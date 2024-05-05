@@ -27,7 +27,8 @@ enum ActionType //The actions supported (you can add more if needed)
 	TO_COPY,
 	TO_CUT,
 	TO_PASTE,
-	TO_SEND_BACK_BRING_FRONT,
+	TO_SEND_BACK,
+	TO_BRING_FRONT,
 	TO_SAVE_GRAPH,
 	TO_LOAD_GRAPH,
 	TO_PLAY,       //Switch interface to Play mode

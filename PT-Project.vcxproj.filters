@@ -160,6 +160,9 @@
     <ClCompile Include="CHexagon.cpp">
       <Filter>Figures Classes</Filter>
     </ClCompile>
+    <ClCompile Include="SendBackAction.cpp">
+      <Filter>Action Classes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CMUgraphicsLib\auxil.h">
@@ -258,6 +261,9 @@
     </ClInclude>
     <ClInclude Include="CHexagon.h">
       <Filter>Figures Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="SendBackAction.h">
+      <Filter>Action Classes</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
