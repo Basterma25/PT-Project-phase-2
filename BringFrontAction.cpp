@@ -1,22 +1,22 @@
-#include"SendBackAction.h"
+#include"BringFrontAction.h"
 #include "..\ApplicationManager.h"
 #include "..\GUI\Output.h"
 
-SendBackAction::SendBackAction(ApplicationManager* pApp):Action(pApp)
+BringFrontAction::BringFrontAction(ApplicationManager* pApp) :Action(pApp)
 {}
-void SendBackAction::Execute()
+void BringFrontAction::Execute()
 {
 	Output* pOut = pManager->GetOutput();
 	ReadActionParameters();
 	if (SelectedIndex == -1)
 		pOut->PrintMessage("please select a figure first");
 	else
-		pManager->SendFigBack(SelectedIndex);
+		pManager->BringFigFront(SelectedIndex);
 
 
 }
 
-void SendBackAction::ReadActionParameters()
+void BringFrontAction::ReadActionParameters()
 {
 	Point P1;
 	Output* pOut = pManager->GetOutput();
@@ -25,5 +25,5 @@ void SendBackAction::ReadActionParameters()
 
 	//Read 1st corner and store in point P1
 	pIn->GetPointClicked(P1.x, P1.y);
-  SelectedIndex = pManager->GetSelectedFigureIndex();
+	SelectedIndex = pManager->GetSelectedFigureIndex();
 }

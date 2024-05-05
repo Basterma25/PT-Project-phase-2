@@ -1,6 +1,7 @@
 #include "ApplicationManager.h"
 #include "Actions\AddRectAction.h"
-
+#include "SendBackAction.h"
+#include "BringFrontAction.h"
 
 //Constructor
 ApplicationManager::ApplicationManager()
@@ -37,6 +38,14 @@ void ApplicationManager::ExecuteAction(ActionType ActType)
 			pAct = new AddRectAction(this);
 			break;
 
+		case SEND_BACK:
+			pAct = new SendBackAction(this);
+			break;
+
+			case BRING_FRONT:
+			pAct = new BringFrontAction(this);
+			break;
+
 		case EXIT:
 			///create ExitAction here
 			
@@ -69,9 +78,18 @@ void ApplicationManager::SendFigBack(int SelectedIndex)
 {
 	CFigure* SelectedFigure = FigList[SelectedIndex];//saving the selected figure in a separate pointer
 	for (int i = SelectedIndex; i > 0; i--)//looping on figlist to increase the index of all preceding figures by one
-		FigList[i] = FigList[i - 1];//this leaves index =0 empty for the selected figure
+		FigList[i] = FigList[i - 1];//this leaves the first place in the array empty for the selected figure
 	//note that FigCount does not change
 	FigList[0] = SelectedFigure;
+}
+
+void ApplicationManager::BringFigFront(int SelectedIndex)
+{
+	CFigure* SelectedFigure = FigList[SelectedIndex];//saving the selected figure in a separate pointer
+	for (int i = SelectedIndex; i < FigCount; i++)//looping on figlist to dectrasee the index of all following figures by one
+		FigList[i] = FigList[i + 1];//this leaves the last place in the array empty for the selected figure
+	//note that FigCount does not change
+	FigList[FigCount-1] = SelectedFigure;
 }
 
 ////////////////////////////////////////////////////////////////////////////////////

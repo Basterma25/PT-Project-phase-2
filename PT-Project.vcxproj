@@ -129,6 +129,7 @@
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BringFrontAction.cpp" />
     <ClCompile Include="CCircle.cpp" />
     <ClCompile Include="CHexagon.cpp" />
     <ClCompile Include="CMUgraphicsLib\auxil.cpp" />
@@ -179,6 +180,7 @@
     <ClCompile Include="SendBackAction.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BringFrontAction.h" />
     <ClInclude Include="CCircle.h" />
     <ClInclude Include="CHexagon.h" />
     <ClInclude Include="CMUgraphicsLib\auxil.h" />

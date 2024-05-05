@@ -34,7 +34,8 @@ public:
 	
 	// -- Figures Management Functions
 	void AddFigure(CFigure* pFig);          //Adds a new figure to the FigList
-	void SendFigBack(int SelectedIndex);
+	void SendFigBack(int SelectedIndex);    //sends selected figure to back
+	void BringFigFront(int SelectedIndex);  //brings selected figure to front
 	CFigure *GetFigure(int x, int y) const; //Search for a figure given a point inside the figure
 	int GetSelectedFigureIndex()const;
 

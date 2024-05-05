@@ -1,14 +1,14 @@
 #pragma once
-#ifndef SEND_BACK_ACTION_H
-#define SEND_BACK_ACTION_H
+#ifndef BRING_FRONT_ACTION_H
+#define BRING_FRONT_ACTION_H
 
 #include "Action.h"
-class SendBackAction : public Action
+class BringFrontAction : public Action
 {
 private:
 	int SelectedIndex;
 public:
-	SendBackAction(ApplicationManager* pApp);
+	BringFrontAction(ApplicationManager* pApp);
 	virtual void Execute();
 	virtual void ReadActionParameters();
 
