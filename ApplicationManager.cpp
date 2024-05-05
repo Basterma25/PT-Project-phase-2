@@ -64,6 +64,16 @@ void ApplicationManager::AddFigure(CFigure* pFig)
 	if(FigCount < MaxFigCount )
 		FigList[FigCount++] = pFig;	
 }
+
+void ApplicationManager::SendFigBack(int SelectedIndex)
+{
+	CFigure* SelectedFigure = FigList[SelectedIndex];//saving the selected figure in a separate pointer
+	for (int i = SelectedIndex; i > 0; i--)//looping on figlist to increase the index of all preceding figures by one
+		FigList[i] = FigList[i - 1];//this leaves index =0 empty for the selected figure
+	//note that FigCount does not change
+	FigList[0] = SelectedFigure;
+}
+
 ////////////////////////////////////////////////////////////////////////////////////
 CFigure *ApplicationManager::GetFigure(int x, int y) const
 {
@@ -76,6 +86,16 @@ CFigure *ApplicationManager::GetFigure(int x, int y) const
 
 	return NULL;
 }
+
+int ApplicationManager::GetSelectedFigureIndex() const
+{
+	for (int i = 0; i < FigCount; i++)//searching for a selected figure
+		if (FigList[i]->IsSelected())
+			return i;
+	return -1;//a flag indicating that no figures are selected
+}
+
+
 //==================================================================================//
 //							Interface Management Functions							//
 //==================================================================================//

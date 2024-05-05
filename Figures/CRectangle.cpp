@@ -6,6 +6,7 @@ CRectangle::CRectangle(Point P1, Point P2, GfxInfo FigureGfxInfo):CFigure(Figure
 	Corner3 = P2;
 	Corner2.x = Corner3.x; Corner2.y = Corner1.y;
 	Corner4.x = Corner1.x; Corner4.y = Corner3.y;
+	ID = 100 + (newID++);
 }
 	
 

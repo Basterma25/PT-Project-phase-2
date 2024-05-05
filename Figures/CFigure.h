@@ -8,6 +8,7 @@
 class CFigure
 {
 protected:
+	static int newID; //to increment ID of figures of the same type
 	int ID;		//Each figure has an ID
 	bool Selected;	//true if the figure is selected.
 	GfxInfo FigGfxInfo;	//Figure graphis info

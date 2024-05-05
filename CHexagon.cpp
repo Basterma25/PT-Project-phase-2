@@ -10,6 +10,7 @@ CHexagon::CHexagon(Point P, int sl, GfxInfo FigureGfxInfo) : CFigure(FigureGfxIn
 	P6.x = center.x - sidelength;  P6.y = center.y;
 	P2.x = center.x + 0.5 * sidelength; P2.y = center.y - (sidelength * (sqrt(3) / 2));
 	P1.x = center.x - 0.5 * sidelength; P1.y = center.y - (sidelength * (sqrt(3) / 2));
+	ID = 300 + (newID++);
 }
 
 void CHexagon::Draw(Output* pOut) const

@@ -8,6 +8,7 @@ CSquare::CSquare(Point P1, int sl, GfxInfo FigureGfxInfo) : CFigure(FigureGfxInf
 	Corner2.x = center.x + (sidelength / 2); Corner2.y = center.y - (sidelength / 2);
 	Corner3.x = center.x - (sidelength / 2); Corner3.y = center.y + (sidelength / 2);
 	Corner4.x = center.x + (sidelength / 2); Corner4.y = center.y + (sidelength / 2);
+	ID = 250 + (newID++);
 }
 
 void CSquare::Draw(Output* pOut) const
